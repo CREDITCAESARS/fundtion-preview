@@ -17,7 +17,7 @@
   modal.addEventListener("click", function (e) { if (e.target === modal) close(); });
   document.addEventListener("keydown", function (e) { if (e.key === "Escape") close(); });
   function open(item, decision, label) {
-    mt.textContent = (label || (decision === H.values.approve ? "Approve" : "Request change")) + ": " + item;
+    mt.textContent = item;
     fr.src = url(item, decision); modal.classList.add("open"); document.body.style.overflow = "hidden";
   }
   window.hubOpen = open;
